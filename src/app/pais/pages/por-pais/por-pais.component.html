@@ -11,6 +11,18 @@
     </div>
 </div>
 
+<ul class="list-group">
+    <li class="list-group-item list-group-item-action"
+        *ngFor="let pais of paisesSugeridos"
+    >
+        <a  class="nav-link"
+            [routerLink] = "['/pais', pais.alpha2Code]" >
+            {{ pais.name }}
+        </a>
+    </li>
+
+</ul>
+
 <hr>
 
 <div class="alert alert-danger" *ngIf="hayError">
